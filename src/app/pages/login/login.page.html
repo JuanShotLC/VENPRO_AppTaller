@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Ingreso</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-input type="text" placeholder="Cedula" [(ngModel)]="cedula"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input type="password" placeholder="Clave" [(ngModel)]="clave"></ion-input>
+        </ion-item>
+        <ion-button expand="full" class="no-padding" (click)="tryLogin()">Ingreso</ion-button>
+
+        <!-- <div class="ion-paddnig">Registo <span (click)="openRegistro()">Click AQui</span></div> -->
+    </ion-list>
+
+</ion-content>

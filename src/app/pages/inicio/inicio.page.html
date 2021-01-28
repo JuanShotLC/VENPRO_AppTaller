@@ -1,0 +1,40 @@
+<ion-content>
+    <ion-header>
+        <ion-toolbar class="toolbar">
+            <ion-title>Inicio</ion-title>
+            <ion-buttons slot="end">
+                <ion-button (click)="procesoLogout()">
+                    <ion-icon slot="icon-only" name="exit"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-slides>
+        <ion-slide>
+            <ion-card class="card-ios">
+                <ion-card-header class="button-5">
+                    <label>Bienvenido {{nombre}}</label>
+                </ion-card-header>
+                <ion-card-content class="menu">
+                    <img (click)="goToTaller()" class="ico-1" src="assets/icon/ta.png">
+                    <img (click)="goToPresubuestos()" class="ico-1" src="assets/icon/pre.png">
+                    <img (click)="goToFacturas()" class="ico-1" src="assets/icon/fact.png">
+                    <img (click)="goToInventario()" class="ico-1" src="assets/icon/inven.png">
+                    <img (click)="goToContabilidad()" class="ico-1" src="assets/icon/rep.png">
+                    <img (click)="goToVehiculos()" class="ico-1" src="assets/icon/veh.png">
+                    <img (click)="goToUsuarios()" class="ico-1" src="assets/icon/clie.png">
+                    <!-- <img (click)="goToClientes()" class="ico-1" src="assets/icon/clie.png"> -->
+                    <img (click)="goToPerfil()" class="ico-1" src="assets/icon/conf.png">
+                </ion-card-content>
+
+
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
+
+
+
+    <div class="textfooter">@SISTEMASVENPRO</div>
+
+</ion-content>

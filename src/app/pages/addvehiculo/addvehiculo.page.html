@@ -1,0 +1,79 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Nuevo Caso Vehiculo</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ion-item>
+                <ion-label position="floating">Cédula:</ion-label>
+                <ion-input [(ngModel)]="cedula"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Nombre:</ion-label>
+                <ion-input [(ngModel)]="nombres"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Apellido:</ion-label>
+                <ion-input [(ngModel)]="apellidos"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Dirección:</ion-label>
+                <ion-input [(ngModel)]="direccion"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Placa:</ion-label>
+                <ion-input [(ngModel)]="placa"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Marca:</ion-label>
+                <ion-input [(ngModel)]="marca"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Modelo:</ion-label>
+                <ion-input [(ngModel)]="modelo"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label type="number" position="floating">Año:</ion-label>
+                <ion-input [(ngModel)]="anno"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Color:</ion-label>
+                <ion-input [(ngModel)]="color"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label type="number" position="floating">Kilometaje Entrada:</ion-label>
+                <ion-input [(ngModel)]="cedula"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label type="number" position="floating">Kilometraje Salida:</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+
+            <ion-list>
+                <ion-item>
+                    <ion-label>Técnico:</ion-label>
+                    <ion-select [compareWith]="compareWith">
+                        <ion-select-option *ngFor="let user of users" [value]="user">{{user.first + ' ' + user.last}}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </ion-list>
+
+            <ion-item>
+                <ion-label position="floating">Trabajo a realizar:</ion-label>
+                <ion-textarea></ion-textarea>
+            </ion-item>
+
+            <ion-button expand="full" color="primary">Guardar</ion-button>
+
+        </ion-card-content>
+    </ion-card>
+</ion-content>

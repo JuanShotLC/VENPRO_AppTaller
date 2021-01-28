@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Registro</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <div class="">
+            <ion-item>
+                <ion-input type="text" placeholder="Nombres" [(ngModel)]="nombres"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="text" placeholder="Apellidos" [(ngModel)]="apellidos"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Fecha de Nacimiento</ion-label>
+                <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="fecha_nacimiento" min="1940-01-01" max="2019-12-01"></ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-input type="text" placeholder="Correo" [(ngModel)]="correo"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="text" placeholder="Cedula" [(ngModel)]="cedula"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="text" placeholder="Usuario" [(ngModel)]="usuario"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="password" placeholder="Clave" [(ngModel)]="clave"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="password" placeholder="Confirme Clave" [(ngModel)]="confirmar_clave"></ion-input>
+            </ion-item>
+            <ion-button expand="full" class="no-padding" (click)="tryRegistrar()" [disabled]="disabledButton">Registrar</ion-button>
+        </div>
+
+
+    </ion-list>
+</ion-content>

@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Casos</ion-title>
+
+    </ion-toolbar>
+    <ion-searchbar></ion-searchbar>
+
+</ion-header>
+
+<ion-content>
+
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="chevron-down-circle-outline"></ion-refresher-content>
+    </ion-refresher>
+
+    <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+        <ion-fab-button color="success">
+            <ion-icon md="caret-back" ios="chevron-back-circle-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="start">
+            <ion-fab-button color="light" (click)="goToAddVehiculo()">
+                <ion-icon name="car-sport-outline"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button color="light" (click)="goToAddComputador()">
+                <ion-icon name="hardware-chip-outline"></ion-icon>
+            </ion-fab-button>
+        </ion-fab-list>
+    </ion-fab>
+
+
+
+    <ion-list>
+        <ion-item-sliding *ngFor="let caso of casos">
+            <ion-item>
+                <ion-card class="card-list">
+                    <ion-card-content>
+                        <div><img class="tipo_re" src="assets/icon/{{caso.tipo}}.svg"> </div>
+                        <div>N°: {{caso.id}}</div>
+                        <div>Técnico: {{caso.nombre_tec}} {{caso.apellido_tec}}</div>
+                        <div>Estatus: {{caso.estatus}}</div>
+                        <div><img class="estatus" src="assets/icon/progreso_{{caso.estatus_id}}.png"></div>
+
+                    </ion-card-content>
+                </ion-card>
+            </ion-item>
+            <ion-item-options>
+                <ion-item-option (click)="updateData(caso.id)" color="success">Update</ion-item-option>
+                <ion-item-option (click)="delData(caso.id)" color="danger">Delete</ion-item-option>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+
+
+
+</ion-content>

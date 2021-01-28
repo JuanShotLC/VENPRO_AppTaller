@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Inventario</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-searchbar></ion-searchbar>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="chevron-down-circle-outline"></ion-refresher-content>
+    </ion-refresher>
+    <ion-row>
+
+
+        <ion-row *ngFor="let producto of productos">
+            <ion-col offset-4>
+                <div>
+                    <ion-card class="card-list">
+                        <img class="status" src="assets/productos/stock.png">
+                        <ion-card-content>
+                            <div class="nom_e">{{producto.cod_pro}}</div>
+                            <div class="nom_e">{{producto.nombre_pro}}</div>
+                            <div class="stock">{{producto.stock}}</div>
+                        </ion-card-content>
+                    </ion-card>
+                </div>
+            </ion-col>
+        </ion-row>
+
+
+    </ion-row>
+
+
+</ion-content>
