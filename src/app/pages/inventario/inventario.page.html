@@ -21,7 +21,11 @@
                         <ion-card-content>
                             <div class="nom_e">{{producto.cod_pro}}</div>
                             <div class="nom_e">{{producto.nombre_pro}}</div>
-                            <div class="stock">{{producto.stock}}</div>
+                            <div class="stock">
+                                <ion-badge color="medium">{{producto.stock}}</ion-badge>
+                            </div>
+
+
                         </ion-card-content>
                     </ion-card>
                 </div>

@@ -1,34 +1,38 @@
 <ion-header>
     <ion-toolbar>
         <ion-title>Facturas</ion-title>
+
     </ion-toolbar>
+    <ion-searchbar></ion-searchbar>
+
 </ion-header>
 
 <ion-content>
-    <ion-list>
-        <ion-item>
-            <ion-card class="card-list">
-                <ion-card-content>
 
-                    <div>N°: R00001</div>
-                    <div>Técnico:</div>
-                    <div>Estatus: <img class="status" src="assets/icon/estatus_1.png"> Pendiente</div>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="chevron-down-circle-outline"></ion-refresher-content>
+    </ion-refresher>
 
-                </ion-card-content>
-            </ion-card>
-        </ion-item>
-    </ion-list>
 
     <ion-list>
-        <ion-item>
-            <ion-card class="card-list">
-                <ion-card-content>
+        <ion-item-sliding *ngFor="let factura of facturas">
+            <ion-item>
+                <ion-card class="card-list">
+                    <ion-card-content>
+                        <div>
+                            <ion-icon class="icon" name="document-outline"></ion-icon>
+                        </div>
+                        <div>N°: P{{factura.no_presu}}</div>
+                        <div>Cliente: {{factura.cedula_cli}} {{factura.nombre_cli}}</div>
+                        <div>Estatus: {{factura.status_pre}}</div>
+                        <div>Costo: {{factura.costo}}$</div>
 
-                    <div>N°: R00001</div>
-                    <div>Técnico:</div>
-                    <div>Estatus: <img class="status" src="assets/icon/estatus_2.png"> Pendiente</div>
-
-                </ion-card-content>
-            </ion-card>
-        </ion-item>
+                    </ion-card-content>
+                </ion-card>
+            </ion-item>
+        </ion-item-sliding>
     </ion-list>
+
+
+
+</ion-content>

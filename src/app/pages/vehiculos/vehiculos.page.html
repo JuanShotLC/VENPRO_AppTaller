@@ -1,9 +1,39 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>vehiculos</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Facturas</ion-title>
+
+    </ion-toolbar>
+    <ion-searchbar></ion-searchbar>
+
 </ion-header>
 
 <ion-content>
+
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="chevron-down-circle-outline"></ion-refresher-content>
+    </ion-refresher>
+
+
+    <ion-list>
+        <ion-item-sliding *ngFor="let vehiculo of vehiculos">
+            <ion-item>
+                <ion-card class="card-list">
+                    <ion-card-content>
+                        <div>
+                            <ion-icon class="icon" name="document-outline"></ion-icon>
+                        </div>
+                        <div>Placa: {{vehiculo.Placa}}</div>
+                        <div>Marca: {{vehiculo.marca}}</div>
+                        <div>Modelo: {{vehiculo.modelo}}</div>
+                        <div>Año: {{vehiculo.anno}}</div>
+                        <div>Color: {{vehiculo.color}}</div>
+
+                    </ion-card-content>
+                </ion-card>
+            </ion-item>
+        </ion-item-sliding>
+    </ion-list>
+
+
 
 </ion-content>

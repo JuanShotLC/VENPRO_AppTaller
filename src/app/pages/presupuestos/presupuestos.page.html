@@ -19,19 +19,21 @@
             <ion-item>
                 <ion-card class="card-list">
                     <ion-card-content>
-                        <!-- <div><img class="tipo_re" src="assets/icon/{{caso.tipo}}.svg"> </div> -->
+                        <div>
+                            <ion-icon class="icon" name="document-outline"></ion-icon>
+                        </div>
                         <div>N°: P{{presupuesto.no_presu}}</div>
                         <div>Cliente: {{presupuesto.cedula_cli}} {{presupuesto.nombre_cli}}</div>
                         <div>Estatus: {{presupuesto.status_pre}}</div>
-                        <div>Costo: {{presupuesto.costo}}</div>
+                        <div>Costo: {{presupuesto.costo}}$</div>
 
                     </ion-card-content>
                 </ion-card>
             </ion-item>
-            <ion-item-options>
-                <ion-item-option color="success">Update</ion-item-option>
+            <!-- <ion-item-options>
+            <ion-item-option color="success">Update</ion-item-option>
                 <ion-item-option color="danger">Delete</ion-item-option>
-            </ion-item-options>
+            </ion-item-options> -->
         </ion-item-sliding>
     </ion-list>
 

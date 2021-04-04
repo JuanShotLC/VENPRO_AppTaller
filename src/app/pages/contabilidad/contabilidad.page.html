@@ -1,9 +1,52 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>contabilidad</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Movimientos</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                Inresos
+                <div>200</div>
+            </ion-col>
+            <ion-col>
+                Gastos 200
+            </ion-col>
+            <ion-col>
+                Completo 200
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
+
+    <ion-list></ion-list>
+
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+    <!-- <ion-list>
+        <ion-item-sliding>
+            <ion-card class="card-list" *ngFor="let balanc of balance">
+
+                <div class="dia">{{balanc.fecha}}</div>
+                <div class="mes_anno">{{balanc.fecha}}</div>
+                <div class="bagade">
+                    <ion-badge color="success">Viernes</ion-badge>
+                </div>
+                <div class="descri">{{balanc.descri}}</div>
+                <div class="costo">{{balanc.total}}$</div>
+
+            </ion-card>
+
+
+        </ion-item-sliding>
+    </ion-list> -->
+
+
 
 </ion-content>
