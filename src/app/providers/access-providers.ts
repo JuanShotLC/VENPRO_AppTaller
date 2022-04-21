@@ -7,7 +7,7 @@ import 'rxjs/add/operator/timeout';
 @Injectable()
 export class AccessProviders {
     // Url de backend api json
-    server: string= 'http://localhost/SISTEMA_TALLER/dist/api/'
+    server: string= 'https://juanshotlc.000webhostapp.com/dist/api/'
     
     constructor(
         public http: HttpClient

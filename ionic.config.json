@@ -1,5 +1,7 @@
 {
   "name": "tallersApp",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

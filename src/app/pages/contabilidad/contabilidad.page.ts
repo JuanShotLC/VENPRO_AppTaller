@@ -54,19 +54,19 @@ export class ContabilidadPage implements OnInit {
           });
       }
 
-      loadData(event) {
+      // loadData(event) {
 
-        setTimeout(() => {
-          console.log('Done');
-          event.target.complete();    
-          // App logic to determine if all data is loaded
-          // and disable the infinite scroll
+      //   setTimeout(() => {
+      //     console.log('Done');
+      //     event.target.complete();    
+      //     // App logic to determine if all data is loaded
+      //     // and disable the infinite scroll
           
-          if (this.load_balance().length == 1000) {
-            event.target.disabled = true;
-          }
-        }, 500);
-      }
+      //     if (this.load_balance().length == 1000) {
+      //       event.target.disabled = true;
+      //     }
+      //   }, 500);
+      // }
     
       toggleInfiniteScroll() {
         this.infiniteScroll.disabled = !this.infiniteScroll.disabled;
